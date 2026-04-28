@@ -103,9 +103,9 @@ function LoginForm() {
             <input type="checkbox" className="rounded border-gray-300" />
             <span className="text-gray-600">Ghi nhớ đăng nhập</span>
           </label>
-          <a href="#" className="text-primary-600 hover:underline">
+          <Link href="/forgot-password" className="text-primary-600 hover:underline">
             Quên mật khẩu?
-          </a>
+          </Link>
         </div>
 
         <Button type="submit" className="w-full" size="lg" disabled={isLoading}>
