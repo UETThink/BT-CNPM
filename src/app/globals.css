@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Movie card hover effect */
+.movie-card {
+  @apply transition-all duration-300;
+}
+
+.movie-card:hover {
+  @apply transform -translate-y-2 shadow-xl;
+}
+
+/* Seat styling */
+.seat {
+  @apply w-10 h-10 rounded-lg cursor-pointer transition-all duration-200 flex items-center justify-center font-semibold;
+}
+
+.seat-available {
+  @apply bg-primary-100 hover:bg-primary-200 border-2 border-primary-300;
+}
+
+.seat-vip {
+  @apply bg-secondary-100 hover:bg-secondary-200 border-2 border-secondary-400;
+}
+
+.seat-booked {
+  @apply bg-gray-300 cursor-not-allowed opacity-60;
+}
+
+.seat-selected {
+  @apply bg-primary-600 text-white border-2 border-primary-700;
+}
+
+/* Button animations */
+.btn-primary {
+  @apply bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200;
+}
+
+.btn-secondary {
+  @apply bg-secondary-600 hover:bg-secondary-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200;
+}
+
+/* Gradient text */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-secondary-600;
+}
+
+/* Glass effect */
+.glass {
+  @apply bg-white/80 backdrop-blur-md;
+}
+
+/* Animation keyframes */
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s ease-out;
+}
